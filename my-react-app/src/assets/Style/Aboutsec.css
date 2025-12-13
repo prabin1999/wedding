@@ -1,0 +1,35 @@
+.about {
+    color: #4A7A7E;
+    font-family: 'Poppins', sans-serif;
+}
+
+.about-para {
+    color: rgb(112, 112, 112);
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.about-section img {
+    width: auto;
+    max-width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: block;
+    margin: 0 auto;
+    height: 400px;
+}
+
+
+.about-section img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+
+@media (max-width: 768px) {
+    .about-section img {
+        width: 80%;
+        margin-top: 20px;
+    }
+}

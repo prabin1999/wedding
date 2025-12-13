@@ -1,0 +1,60 @@
+.ourgallery {
+    color: #4A7A7E;
+    font-family: 'Poppins', sans-serif;
+}
+
+.oursub {
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    color: rgb(112, 112, 112);
+    text-align: start;
+}
+
+.decor img {
+    height: 420px;
+    object-Fit: cover;
+    border-Radius: 10px;
+    transition: all 0.3s ease;
+}
+
+
+.wed1 img {
+    height: 420px;
+    object-Fit: cover;
+    border-Radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.wed3 img {
+    height: 420px;
+    object-Fit: cover;
+    border-Radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.wed2 img {
+    height: 420px;
+    object-Fit: cover;
+    border-Radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.decor img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 35px rgba(0, 104, 88, 0.15);
+}
+
+.wed1 img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 35px rgba(0, 104, 88, 0.15);
+}
+
+.wed2 img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 35px rgba(0, 104, 88, 0.15);
+}
+
+.wed3 img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 35px rgba(0, 104, 88, 0.15);
+}

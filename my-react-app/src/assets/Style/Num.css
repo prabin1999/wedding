@@ -1,0 +1,23 @@
+
+.num-section {
+  background: #4A7A7E;
+  padding: 10px 20px;
+}
+
+.num-section h1 {
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+}
+
+.num-section p {
+  color: #ffffff;
+  letter-spacing: 1.5px;
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+@media (max-width: 576px) {
+  .num-section h1 {
+    font-size: 2rem;
+  }
+}

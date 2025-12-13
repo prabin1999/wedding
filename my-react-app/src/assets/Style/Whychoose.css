@@ -1,0 +1,78 @@
+
+ .whychoose {
+    color: #4A7A7E;
+    font-family: 'Poppins', sans-serif;
+}
+
+.whysub {
+  color: #666666;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+}
+
+.cards-services {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  background-color: #4a7a7e !important;
+  transition: transform 0.3s ease;
+  z-index: 1;
+  color: #fff;
+}
+
+.cards-services::before,
+.cards-services::after {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  background-color: #60a9af;
+  border-radius: inherit;
+  opacity: 0;
+  transition: all 0.3s linear;
+  z-index: 0;
+}
+
+.cards-services::before {
+  top: 100%;
+  left: 100%;
+  transform: translate(-100%, -100%);
+}
+
+.cards-services::after {
+  bottom: 100%;
+  right: 100%;
+  transform: translate(100%, 100%);
+}
+
+.cards-services:hover::before,
+.cards-services:hover::after {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+}
+
+.cards-services:hover {
+  transform: translateY(-8px);
+}
+
+.cards-services * {
+  position: relative;
+  z-index: 2;
+}
+
+.card-head {
+  color: #ffffff !important;
+  font-family: "Poppins", sans-serif;
+}
+
+.card-para {
+  color: #e6f1f1;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+}
+
+.service-icon {
+  width: 100px;
+  height: 100px;
+}
