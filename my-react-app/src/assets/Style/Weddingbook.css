@@ -13,7 +13,7 @@
 
 .card-head {
     font-family: 'Poppins', sans-serif;
-    color: #4A7A7E;
+    color: #4A7A7E !important;
 }
 
 .wedding-para {
