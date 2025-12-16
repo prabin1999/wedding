@@ -22,8 +22,9 @@
     color: rgb(112, 112, 112);
 }
 
-.card-text {
+.card-textt {
     font-size: 14px;
+    color: black;
 }
 
 .btn.book-btn {

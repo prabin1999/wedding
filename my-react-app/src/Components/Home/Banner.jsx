@@ -27,7 +27,7 @@ const Banner = () => {
           </div>
         </div>
 
-        <Filter />
+        {/* <Filter /> */}
       </div>
     </div>
   );

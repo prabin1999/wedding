@@ -17,10 +17,10 @@ const Home = () => {
       <Aboutsec />
       <Recently />
       <Upcoming />
-      <Costumes />
+      {/* <Costumes /> */}
       <Whychoose />
       <Ourgallery />
-      <Contact />
+      {/* <Contact /> */}
     </div>
   )
 }

@@ -40,7 +40,7 @@ const Ourgallery = () => {
                 <div className="d-flex justify-content-end mt-5 buttons mb-4">
                     
                     <Link to="/gallery">
-                        <button type="button" className="btn px-4">View Our Gallery</button>
+                        <button type="button" className="btn px-4 view">View Our Gallery</button>
                     </Link>
 
                 </div>

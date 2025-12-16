@@ -1,60 +1,74 @@
 .ourgallery {
-    color: #4A7A7E;
-    font-family: 'Poppins', sans-serif;
+  color: #800000 !important;
+  font-family: "Poppins", sans-serif;
+}
+.view {
+  background-color: #800000 !important;
+  color: #fff;
+  border-radius: 30px;
+  padding: 10px 24px;
+  transition: all 0.3s ease;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+}
+.btn.view:hover {
+  background-color: #ff9933 !important;
+  color: #ffffff !important;
 }
 
+
 .oursub {
-    font-size: 14px;
-    font-family: 'Poppins', sans-serif;
-    color: rgb(112, 112, 112);
-    text-align: start;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  color: #f8bbd0 !important;
+  text-align: start;
 }
 
 .decor img {
-    height: 420px;
-    object-Fit: cover;
-    border-Radius: 10px;
-    transition: all 0.3s ease;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: all 0.3s ease;
 }
 
-
 .wed1 img {
-    height: 420px;
-    object-Fit: cover;
-    border-Radius: 10px;
-    transition: all 0.3s ease;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: all 0.3s ease;
 }
 
 .wed3 img {
-    height: 420px;
-    object-Fit: cover;
-    border-Radius: 10px;
-    transition: all 0.3s ease;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: all 0.3s ease;
 }
 
 .wed2 img {
-    height: 420px;
-    object-Fit: cover;
-    border-Radius: 10px;
-    transition: all 0.3s ease;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: all 0.3s ease;
 }
 
 .decor img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 15px 35px rgba(0, 104, 88, 0.15);
+  transform: scale(1.05);
+  box-shadow: 0 15px 35px rgba(0, 104, 88, 0.15);
 }
 
 .wed1 img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 15px 35px rgba(0, 104, 88, 0.15);
+  transform: scale(1.05);
+  box-shadow: 0 15px 35px rgba(0, 104, 88, 0.15);
 }
 
 .wed2 img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 15px 35px rgba(0, 104, 88, 0.15);
+  transform: scale(1.05);
+  box-shadow: 0 15px 35px rgba(0, 104, 88, 0.15);
 }
 
 .wed3 img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 15px 35px rgba(0, 104, 88, 0.15);
+  transform: scale(1.05);
+  box-shadow: 0 15px 35px rgba(0, 104, 88, 0.15);
 }

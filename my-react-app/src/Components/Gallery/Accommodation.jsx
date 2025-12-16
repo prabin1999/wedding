@@ -6,7 +6,7 @@ const Accommodation = () => {
 
         <section className="accommodation py-5 bg-light">
             <div className="container text-center">
-                <h2 className=" mb-4">Comfortable Stay & Accommodation</h2>
+                <h2 className=" mb-4 comfort">Comfortable Stay & Accommodation</h2>
                 <p className=" mb-5 acco">
                     We ensure every guest enjoys a safe, clean, and premium stay with
                     modern facilities and warm Indian hospitality.

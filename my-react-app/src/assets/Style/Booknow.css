@@ -101,3 +101,60 @@
     margin-top: 25px;
   }
 }
+/* Container */
+.booknow-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh; /* vertically center */
+  background: #f8f8f8; /* light background */
+  padding: 20px;
+}
+
+/* Form */
+.booknow-container form {
+  background: #fff;
+  padding: 30px 40px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Form title */
+.booknow-container h2 {
+  margin-bottom: 20px;
+  color: #4a7a7e; /* your primary theme color */
+  font-weight: 600;
+}
+
+/* Input fields */
+.booknow-container input {
+  width: 100%;
+  padding: 12px 15px;
+  margin: 10px 0 20px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  transition: border 0.3s;
+}
+
+.booknow-container input:focus {
+  border-color: #4a7a7e;
+  outline: none;
+}
+
+/* Error message */
+.booknow-container p {
+  margin-bottom: 10px;
+  color: red;
+  font-size: 14px;
+}
+
+/* Submit button */
+.booknow-container button {
+  width: 100%;
+  padding: 12
+}

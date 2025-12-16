@@ -1,5 +1,5 @@
 .costume-section {
-    background-color: #4A7A7E;
+ background: linear-gradient(135deg, #800000, #D4AF37);
 
 }
 
@@ -14,7 +14,7 @@
 }
 
 .card-service {
-    background-color: #4A7A7E !important;
+    background-color: #d40000 !important;
     border: none !important;
     border-radius: 10px;
     overflow: hidden;
@@ -42,7 +42,7 @@
 
 .button .btn {
     background-color: #ffffff;
-    color: #4A7A7E;
+    color: maroon;
     border-radius: 30px;
     font-size: 14px;
     transition: all 0.3s ease;
@@ -50,7 +50,7 @@
 }
 
 .button .btn:hover {
-    background-color: #00a88c !important;
+   background-color: #FF6F61;
     color: #ffffff;
     transform: translateY(-3px);
 }

@@ -6,9 +6,11 @@ import Aboutpage from "./Components/AboutPage/Aboutpage";
 import Wedding from "./Components/Weddingpage/Wedding";
 import Gallery from "./Components/Gallery/Gallery";
 import Costume from "./Components/Costumes/Costume";
-import BookNow from "./Components/Booknow/Booknow";
+import Login from "./Components/Login/Login";
+import Sign from "./Components/Sign/Sign";
 import { Routes, Route } from "react-router-dom";
-import Contactuss from "./Components/Contactus.jsx/Contactuss";
+
+
 
 function App() {
   return (
@@ -20,10 +22,11 @@ function App() {
         <Route path="/wedding" element={<Wedding />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/costumes" element={<Costume />} />
-        <Route path="/booknow" element={<BookNow />} />
-        <Route path="/contactus" element={<Contactuss />} />
-      </Routes>
+        <Route path="/login" element={<Login/>} />
+        <Route path="/sign" element={<Sign/>} />
+      </Routes> 
       <Footer />
+
     </>
   );
 }

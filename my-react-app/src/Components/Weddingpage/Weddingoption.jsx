@@ -31,7 +31,7 @@ const Weddingoption = () => {
                                 <img src={card.img} alt="/" className="card-img" />
                                 <div className="card-body border rounded">
                                     <h5 className="card-head text-center  ">{card.title}</h5>
-                                    <p className="card-text">{card.text}</p>
+                                    <p className="card-textt">{card.text}</p>
 
                                     <div className="d-flex justify-content-center but">
                                         <Link to="/booknow" className="btn book-btn px-4 text-white">

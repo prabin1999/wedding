@@ -1,11 +1,11 @@
 
  .whychoose {
-    color: #4A7A7E;
+    color: #800000 !important;
     font-family: 'Poppins', sans-serif;
 }
 
 .whysub {
-  color: #666666;
+  color: #F8BBD0 !important; 
   font-size: 14px;
   font-family: "Poppins", sans-serif;
 }
@@ -14,7 +14,7 @@
   position: relative;
   overflow: hidden;
   border-radius: 16px;
-  background-color: #4a7a7e !important;
+  background-color:#800000 !important;
   transition: transform 0.3s ease;
   z-index: 1;
   color: #fff;
@@ -26,7 +26,7 @@
   position: absolute;
   width: 50%;
   height: 50%;
-  background-color: #60a9af;
+  background-color: #D4AF37;
   border-radius: inherit;
   opacity: 0;
   transition: all 0.3s linear;
@@ -62,7 +62,7 @@
 }
 
 .card-head {
-  color: #ffffff !important;
+  color: white !important;
   font-family: "Poppins", sans-serif;
 }
 

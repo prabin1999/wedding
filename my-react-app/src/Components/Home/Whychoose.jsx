@@ -28,7 +28,7 @@ const Whychoose = () => {
                                 <img src={img} alt={title} className="service-icon" />
                             </div>
                             <div className="card-body">
-                                <h5 className="card-head">{title}</h5>
+                                <h5 className="card-head text-white">{title}</h5>
                                 <p className="card-para">{text}</p>
                             </div>
                         </div>

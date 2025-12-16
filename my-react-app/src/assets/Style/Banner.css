@@ -1,5 +1,5 @@
 .crafting {
-    color: rgb(112, 112, 112);
+  color: #F8BBD0 !important; 
 }
 
 .banner {
@@ -12,7 +12,9 @@
     z-index: 10000;
 }
 
-
+.experiance{
+color: maroon;
+}
 .banner-wrapper {
     width: 100%;
 }
