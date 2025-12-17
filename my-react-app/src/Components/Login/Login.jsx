@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "../../assets/Style/Login.css";
 
 const Login = () => {
@@ -9,33 +10,35 @@ const Login = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setErrorMessage("");
 
     try {
-      const response = await fetch("https://api.yourwebsite.com/login", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, password }),
-      });
+      const response = await fetch(
+        import.meta.env.VITE_API_URL + "/login",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ email, password }),
+        }
+      );
 
       const data = await response.json();
 
-      if (response.ok) {
-        localStorage.setItem("userToken", data.token);
-        setIsSuccess(true);
-        setErrorMessage("");
-      } else {
-        setErrorMessage(data.message || "Login failed");
+      if (!response.ok) {
+        throw new Error(data.message || "Login failed");
       }
+
+      localStorage.setItem("userToken", data.token);
+      setIsSuccess(true);
     } catch (error) {
-      setErrorMessage("An error occurred. Please try again.");
-      console.error(error);
+      setErrorMessage(error.message);
     }
   };
 
   if (isSuccess) {
     return (
       <div className="login-success">
-        <h2>Login Successful!</h2>
+        <h2>Login Successful</h2>
         <p>Redirecting...</p>
       </div>
     );
@@ -45,14 +48,13 @@ const Login = () => {
     <div className="login-container">
       <form className="login-form" onSubmit={handleSubmit}>
         <h2>Sign In</h2>
+
         {errorMessage && <p className="error-message">{errorMessage}</p>}
 
         <div className="input-group">
-          <label htmlFor="email">Email</label>
           <input
             type="email"
-            id="email"
-            placeholder="Enter your email"
+            placeholder="Enter Your Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
@@ -60,11 +62,9 @@ const Login = () => {
         </div>
 
         <div className="input-group">
-          <label htmlFor="password">Password</label>
           <input
             type="password"
-            id="password"
-            placeholder="Enter your password"
+            placeholder="Password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
@@ -74,7 +74,7 @@ const Login = () => {
         <button type="submit">Login</button>
 
         <p className="signup-text">
-          Don't have an account? <a href="/signup">Sign Up</a>
+          Don’t have an account? <Link to="/sign">Sign Up</Link>
         </p>
       </form>
     </div>

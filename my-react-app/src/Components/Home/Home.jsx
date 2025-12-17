@@ -8,6 +8,7 @@ import Costumes from './Costumes'
 import Whychoose from './Whychoose'
 import Ourgallery from './Ourgallery'
 import Contact from './Contact'
+import Faq from './Faq'
 
 const Home = () => {
   return (
@@ -20,6 +21,7 @@ const Home = () => {
       {/* <Costumes /> */}
       <Whychoose />
       <Ourgallery />
+      <Faq/>
       {/* <Contact /> */}
     </div>
   )

@@ -12,8 +12,8 @@ const cardsData = [
 
 const Whychoose = () => {
     return (
-        <div className="container py-4">
-            <h2 className="text-center mt-5 mb-3 whychoose">
+        <div className="container py-4 mb-5">
+            <h2 className="text-center mt-3 mb-3 whychoose">
                 Why Choose Us
             </h2>
             <p className="text-center mb-5 whysub">

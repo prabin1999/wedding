@@ -1,110 +1,134 @@
-import React, { useState } from 'react';
-import "../../assets/Style/Sign.css"
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import "../../assets/Style/Sign.css";
+
 const Sign = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
-  const [errorMessage, setErrorMessage] = useState('');
-  const [isSuccess, setIsSuccess] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    password: "",
+    confirmPassword: "",
+  });
+
+  const [errorMessage, setErrorMessage] = useState("");
+  const [successMessage, setSuccessMessage] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setErrorMessage("");
+    setSuccessMessage("");
+
+    const { name, email, password, confirmPassword } = formData;
 
     if (password !== confirmPassword) {
       setErrorMessage("Passwords do not match");
       return;
     }
 
+    if (password.length < 6) {
+      setErrorMessage("Password must be at least 6 characters");
+      return;
+    }
+
     try {
-  
-      const response = await fetch('https://api.yourwebsite.com/signup', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, email, password }),
-      });
+      setLoading(true);
+
+      const response = await fetch(
+        import.meta.env.VITE_API_URL + "/signup",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ name, email, password }),
+        }
+      );
 
       const data = await response.json();
 
-      if (response.ok) {
-        setIsSuccess(true);
-        setErrorMessage('');
-      } else {
-        setErrorMessage(data.message || 'Sign up failed');
+      if (!response.ok) {
+        throw new Error(data.message || "Signup failed");
       }
+
+      setSuccessMessage("Account created successfully!");
+      setFormData({
+        name: "",
+        email: "",
+        password: "",
+        confirmPassword: "",
+      });
     } catch (error) {
-      setErrorMessage('An error occurred. Please try again.');
-      console.error(error);
+      setErrorMessage(error.message);
+    } finally {
+      setLoading(false);
     }
   };
-
-  if (isSuccess) {
-    return (
-      <div className="signup-success">
-        <h2>Sign Up Successful!</h2>
-        <p>You can now <a href="/login">login</a></p>
-      </div>
-    );
-  }
 
   return (
     <div className="signup-container">
       <form className="signup-form" onSubmit={handleSubmit}>
         <h2>Create Account</h2>
+
         {errorMessage && <p className="error-message">{errorMessage}</p>}
+        {successMessage && (
+          <p className="success-message">
+            {successMessage} <Link to="/login">Login</Link>
+          </p>
+        )}
 
         <div className="input-group">
-          <label htmlFor="name">Full Name</label>
           <input
             type="text"
-            id="name"
-            placeholder="Enter your full name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
+            name="name"
+            placeholder="Full Name"
+            value={formData.name}
+            onChange={handleChange}
             required
           />
         </div>
 
         <div className="input-group">
-          <label htmlFor="email">Email</label>
           <input
             type="email"
-            id="email"
-            placeholder="Enter your email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            name="email"
+            placeholder="Email Address"
+            value={formData.email}
+            onChange={handleChange}
             required
           />
         </div>
 
         <div className="input-group">
-          <label htmlFor="password">Password</label>
           <input
             type="password"
-            id="password"
-            placeholder="Enter your password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
+            name="password"
+            placeholder="Password (min 6 characters)"
+            value={formData.password}
+            onChange={handleChange}
             required
           />
         </div>
 
         <div className="input-group">
-          <label htmlFor="confirmPassword">Confirm Password</label>
           <input
             type="password"
-            id="confirmPassword"
-            placeholder="Confirm your password"
-            value={confirmPassword}
-            onChange={(e) => setConfirmPassword(e.target.value)}
+            name="confirmPassword"
+            placeholder="Confirm Password"
+            value={formData.confirmPassword}
+            onChange={handleChange}
             required
           />
         </div>
 
-        <button type="submit">Sign Up</button>
+        <button type="submit" disabled={loading}>
+          {loading ? "Creating Account..." : "Sign Up"}
+        </button>
 
         <p className="login-text">
-          Already have an account? <a href="/login">Login</a>
+          Already have an account? <Link to="/login">Login</Link>
         </p>
       </form>
     </div>

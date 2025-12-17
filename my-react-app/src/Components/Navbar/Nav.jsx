@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import logo from "../../assets/Images/weds-bg - Edited.png"
+import logo from "../../assets/Images/weds-mar.png";
 import "../../assets/Style/Nav.css";
 
 const Nav = ({ user, logout }) => {
@@ -16,9 +16,6 @@ const Nav = ({ user, logout }) => {
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navMenu"
-          aria-controls="navMenu"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
         >
           <span className="navbar-toggler-icon"></span>
         </button>
@@ -26,65 +23,58 @@ const Nav = ({ user, logout }) => {
         <div className="collapse navbar-collapse" id="navMenu">
           <ul className="navbar-nav mx-auto gap-3 align-items-center">
             <li className="nav-item">
-              <NavLink to="/" className="nav-link" end>
+              <NavLink to="/" className="nav-link">
                 HOME
               </NavLink>
             </li>
 
-            <li className="nav-item dropdown">
-              <span
-                className="nav-link dropdown-toggle"
-                data-bs-toggle="dropdown" >
-                WEDDING
-              </span>
-        
-            </li>
-
-            <li className="nav-item dropdown">
-              <span
-                className="nav-link dropdown-toggle"
-                data-bs-toggle="dropdown"
-              >
-                BLOG     </span>
-            </li>
-
-           
-            <li className="nav-item dropdown">
-              <span
-                className="nav-link dropdown-toggle"
-                data-bs-toggle="dropdown"  >
-              FAQ
-              </span>
-            </li>
-
-         
             <li className="nav-item">
-              <NavLink to="/gallery" className="nav-link">
+              <NavLink to="/wedding" className="nav-link">
+                WEDDING
+              </NavLink>
+            </li>
+
+            <li className="nav-item">
+              <NavLink to="/blog" className="nav-link">
+                BLOG
+              </NavLink>
+            </li>
+
+            <li className="nav-item">
+              <NavLink to="/faqqq" className="nav-link">
+                FAQ
+              </NavLink>
+            </li>
+
+            <li className="nav-item">
+              <NavLink to="/contact" className="nav-link">
                 CONTACT
+              </NavLink>
+            </li>
+
+            <li className="nav-item">
+              <NavLink to="/host" className="nav-link">
+                BECOME A HOST
               </NavLink>
             </li>
           </ul>
 
           {!user ? (
             <div className="d-flex gap-2">
-              <NavLink to="/login">
-                <button className="btn btn-outline-primary px-4">Login</button>
+              <NavLink to="/login" className="btn btn-outline-primary px-4">
+                Login
               </NavLink>
-              <NavLink to="/sign">
-                <button className="btn btn-primary px-4">Sign Up</button>
+              <NavLink to="/sign" className="btn btn-primary px-4">
+                Sign Up
               </NavLink>
             </div>
           ) : (
             <div className="d-flex gap-2">
-              <NavLink to="/dashboard">
-                <button className="btn btn-outline-primary px-4">
-                  Dashboard
-                </button>
+              <NavLink to="/dashboard" className="btn btn-outline-primary px-4">
+                Dashboard
               </NavLink>
-              <NavLink to="/profile">
-                <button className="btn btn-outline-secondary px-4">
-                  Profile
-                </button>
+              <NavLink to="/profile" className="btn btn-outline-secondary px-4">
+                Profile
               </NavLink>
               <button className="btn btn-danger px-4" onClick={logout}>
                 Logout
