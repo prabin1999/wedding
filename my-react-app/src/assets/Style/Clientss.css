@@ -1,5 +1,6 @@
 .client-title {
     font-family: 'Poppins', sans-serif;
+    color: maroon !important;
 }
 
 .client-subtitle {
@@ -9,14 +10,12 @@
 }
 
 .client-card {
-    background: #4A7A7E;
+    background:maroon;
     border-radius: 10px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
     transition: all 0.3s ease;
     justify-content: center !important;
     align-items: center;
-
-
 }
 
 .client-card:hover {

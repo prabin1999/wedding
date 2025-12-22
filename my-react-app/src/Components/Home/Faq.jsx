@@ -50,7 +50,7 @@ const Faq = () => {
   };
 
   return (
-    <div className="faq-background ">
+    <div className="faq-background  ">
       <div className="faq-card container">
         <h2 className="faq-title text-center">More About PureWeds</h2>
         <div className="faq-columns">

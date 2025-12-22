@@ -48,7 +48,7 @@
 .btn-outline-primary {
   border-color: #800000 !important;
   color: #800000 !important;
-  border-radius: 20px !important;
+  border-radius: 12px !important;
 }
 .btn-outline-primary:hover {
   color: white !important;
@@ -62,7 +62,7 @@
 .btn-primary {
   background-color: #800000 !important;
   border-color: #800000 !important;
-    border-radius: 20px !important;
+  border-radius: 12px !important;
 }
 
 .btn-primary:hover {
@@ -78,6 +78,50 @@
 .btn-danger:hover {
   background-color: #8a0018;
 }
+.animate__animated.animate__bounce {
+  --animate-duration: 2s;
+}
+
+@-webkit-keyframes flip-horizontal-bottom {
+  0% {
+    -webkit-transform: rotateX(0);
+            transform: rotateX(0);
+  }
+  100% {
+    -webkit-transform: rotateX(-180deg);
+            transform: rotateX(-180deg);
+  }
+}
+
+@keyframes flip-horizontal-bottom {
+  0% {
+    transform: rotateX(0);
+  }
+  100% {
+    transform: rotateX(-180deg);
+  }
+}
+
+/* Reusable animation class */
+.flip-horizontal-bottom {
+  -webkit-animation: flip-horizontal-bottom 0.4s
+    cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+  animation: flip-horizontal-bottom 0.4s
+    cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+}
+
+/* Apply on hover */
+.auth-btn:hover {
+  animation: flip-horizontal-bottom 0.4s
+    cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+}
+
+/* Smooth UX */
+.auth-btn {
+  transition: transform 0.3s ease;
+  transform-style: preserve-3d;
+}
+
 
 @media (max-width: 991px) {
   .navbar-nav {

@@ -13,7 +13,7 @@
 
 .card-head {
     font-family: 'Poppins', sans-serif;
-    color: #4A7A7E !important;
+    color: maroon !important;
 }
 
 .wedding-para {
@@ -28,7 +28,7 @@
 }
 
 .btn.book-btn {
-    background-color: #4A7A7E !important;
+    background-color: maroon !important;
     color: #fff !important;
     border: none !important;
     font-family: 'Poppins', sans-serif;
@@ -42,5 +42,8 @@
 .btn.book-btn:hover {
     transform: translateY(-2px);
     color: #ffffff;
-    background-color: #00a88c !important;
+    background-color: goldenrod !important;
+}
+.wedding{
+    color: maroon !important;
 }

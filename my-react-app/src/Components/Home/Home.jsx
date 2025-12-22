@@ -9,6 +9,7 @@ import Whychoose from './Whychoose'
 import Ourgallery from './Ourgallery'
 import Contact from './Contact'
 import Faq from './Faq'
+import Wantwelcome from './Wantwelcome'
 
 const Home = () => {
   return (
@@ -17,11 +18,12 @@ const Home = () => {
       <Num />
       <Aboutsec />
       <Recently />
-      <Upcoming />
+      {/* <Upcoming /> */}
       {/* <Costumes /> */}
       <Whychoose />
       <Ourgallery />
       <Faq/>
+      <Wantwelcome/>
       {/* <Contact /> */}
     </div>
   )

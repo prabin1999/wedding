@@ -61,10 +61,13 @@ const Nav = ({ user, logout }) => {
 
           {!user ? (
             <div className="d-flex gap-2">
-              <NavLink to="/login" className="btn btn-outline-primary px-4">
+              <NavLink
+                to="/login"
+                className="btn btn-outline-primary px-4 auth-btn animate__animated animate__bounce" > 
                 Login
               </NavLink>
-              <NavLink to="/sign" className="btn btn-primary px-4">
+
+              <NavLink to="/sign" className="btn btn-primary px-4 auth-btn animate__animated animate__bounce">
                 Sign Up
               </NavLink>
             </div>

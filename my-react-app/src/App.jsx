@@ -12,6 +12,8 @@ import { Routes, Route } from "react-router-dom";
 import FaqSection from "./Components/Faqpage/Faqq";
 import Faqcontent from "./Components/Faqpage/Faqcontent";
 import Hostsec from "./Components/Host/Hostsec";
+import Contactuss from "./Components/Contactus.jsx/Contactuss";
+import Contactpage from "./Components/Contactus.jsx/Contactpage";
 
 
 
@@ -26,6 +28,7 @@ function App() {
         <Route path="/faqqq" element={<Faqcontent/>} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/costumes" element={<Costume />} />
+        <Route path="/contact" element={<Contactpage/>}/>
         <Route path="/host" element={<Hostsec/>} />
         <Route path="/login" element={<Login/>} />
         <Route path="/sign" element={<Sign/>} />

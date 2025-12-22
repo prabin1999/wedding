@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 const Ourgallery = () => {
   return (
     <div className="ourgallery-section">
-      <div className="container py-4">
+      <div className="container py-3">
         <h2 className="text-center mt-0 ourgallery">Our Gallery</h2>
 
         <p className="text-center mb-5 oursub">

@@ -108,7 +108,7 @@ const Footer = () => {
         </section>
 
         <section className="footer-content">
-          <div className="container text-md-start mt-5">
+          <div className="container text-md-start mt-5 ">
             <div className="row">
               <div className="col-md-4 col-lg-4 col-xl-3 mb-4">
                 <h6 className="footer-title">PureWeds</h6>
@@ -118,7 +118,7 @@ const Footer = () => {
                 </p>
               </div>
 
-              <div className="col-md-2 col-lg-2 col-xl-2 mb-4">
+              <div className="col-md-2 col-lg-2 col-xl-2 mb-4 me-5">
                 <h6 className="footer-title">Services</h6>
                 <p>
                   <Link to="/wedding" className="footer-link">
@@ -137,7 +137,7 @@ const Footer = () => {
                 </p>
               </div>
 
-              <div className="col-md-4 col-lg-2 col-xl-2 mb-4">
+              <div className="col-md-4 col-lg-2 col-xl-2 mb-4 me-5">
                 <h6 className="footer-title">Useful Links</h6>
                 <p>
                   <Link to="/about" className="footer-link">
@@ -156,7 +156,7 @@ const Footer = () => {
                 </p>
               </div>
 
-              <div className="col-md-4 col-lg-3 col-xl-3 mb-md-0 mb-4">
+              <div className="col-md-4 col-lg-3 col-xl-3 mb-md-0 mb-4 me-5">
                 <h6 className="footer-title">Contact</h6>
                 <p>
                   <i className="fas fa-envelope me-3"></i> pureweds@gmail.com

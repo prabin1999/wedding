@@ -1,7 +1,8 @@
 import React from "react";
-import hands from "../../assets/Images/audi.jpg";
-import photo from "../../assets/Images/punjabiii.jpeg";
-import nava from "../../assets/Images/navratri.jpg";
+import { Link } from "react-router-dom";
+import hands from "../../assets/Images/wmremove.jpeg";
+import photo from "../../assets/Images/wmremove2.jpeg";
+import nava from "../../assets/Images/Hailuo.jpeg";
 import "../../assets/Style/Banner.css";
 import Carousel from "react-bootstrap/Carousel";
 
@@ -9,12 +10,14 @@ const Banner = () => {
   const slides = [
     {
       image: hands,
-      heading: "Be our guest. Experience an Indian wedding, not just as a spectator—but as family.",
+      heading:
+        "Be our guest. Experience an Indian wedding, not just as a spectator—but as family.",
       text: "Be a guest, meet new people, and explore traditions.",
     },
     {
       image: photo,
-      heading: "You’re invited to celebrate love, culture, and tradition—at a real Indian wedding.",
+      heading:
+        "You’re invited to celebrate love, culture, and tradition—at a real Indian wedding.",
       text: "Join guests from around the world in a cultural experience.",
     },
     {
@@ -31,14 +34,20 @@ const Banner = () => {
           <img
             className="d-block w-100 banner-image"
             src={slide.image}
-            alt={`Slide ${index + 1}`}
-          />
-          {/* Overlay */}
+            alt={`Slide ${index + 1}`}  />
+
           <div className="banner-overlay"></div>
 
-          <Carousel.Caption>
+          <Carousel.Caption className="banner-caption">
             <h1>{slide.heading}</h1>
-            {slide.text && <p>{slide.text}</p>}
+            <p>{slide.text}</p>
+
+            <div className="py-4">
+              <Link to="/" className="faq-button text-decoration-none">
+                Find Out More
+              </Link>
+            </div>
+
           </Carousel.Caption>
         </Carousel.Item>
       ))}

@@ -21,15 +21,17 @@ const Faqq = () => {
   };
 
   return (
+
     <div className="faq-container">
       <h2 className="faq-title text-center">ABOUT PURE WEDDING</h2>
       <div className="faq-list">
         {faqData.map((item, index) => (
+
           <div
             key={index}
             className={`faq-item ${openIndex === index ? "open" : ""}`}
-            onClick={() => toggleIndex(index)}
-          >
+            onClick={() => toggleIndex(index)}>
+
             <div className="faq-question">
               {item.question}
               <span className={`arrow ${openIndex === index ? "open" : ""}`}>
@@ -42,6 +44,7 @@ const Faqq = () => {
         ))}
       </div>
     </div>
+    
   );
 };
 

@@ -3,6 +3,13 @@
   font-family: "Poppins", sans-serif;
 }
 
+.about-lists{
+  color: #800000 ;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+
+}
+
 .about-para {
   color: #555555 !important;
   font-size: 14px;

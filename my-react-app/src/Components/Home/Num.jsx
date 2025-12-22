@@ -32,7 +32,7 @@ const Num = () => {
 
   return (
     <div className="num-section">
-      <div className="container">
+      <div className="container mt-2">
         <div className="row text-center justify-content-center">
           
           <div className="col-4 col-md-2">
